@@ -1,5 +1,5 @@
 {
-  "tslint.autoFixOnSave": false,
+  "tslint.autoFixOnSave": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
