@@ -1,27 +1,46 @@
 {
-  "presets": [[
-    "@babel/env", {
-      "modules": false,
-      "debug": true
-    }],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "debug": true
+      }
+    ],
     "@babel/react",
     "@babel/typescript"
   ],
   "plugins": [
-    ["module-resolver", {
-      "extensions": [".js", ".jsx", ".ts", ".tsx"],
-      "root": ["./src"]
-    }]
+    [
+      "module-resolver",
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".jsx",
+          ".json",
+          ".scss"
+        ],
+        "root": [
+          "./src"
+        ]
+      }
+    ]
   ],
   "env": {
     "test": {
-      "presets": [[
-        "@babel/env", {
-          "modules": "commonjs",
-          "targets": {
-            "node": "current"
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": "commonjs",
+            "targets": {
+              "node": "current"
+            }
           }
-        }],
+        ],
         "@babel/react",
         "@babel/typescript"
       ],
