@@ -4,7 +4,6 @@
       "modules": false,
       "debug": true
     }],
-    "@babel/stage-3",
     "@babel/react",
     "@babel/typescript"
   ],
@@ -23,7 +22,6 @@
             "node": "current"
           }
         }],
-        "@babel/stage-3",
         "@babel/react",
         "@babel/typescript"
       ],

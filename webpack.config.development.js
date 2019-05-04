@@ -7,7 +7,6 @@ module.exports = function () {
   myDevConfig.devtool = 'inline-source-map'
 
   myDevConfig.plugins = myDevConfig.plugins.concat(
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
     new ForkTsCheckerNotifierWebpackPlugin({ title: 'Webpack build', excludeWarnings: true })
   )
 

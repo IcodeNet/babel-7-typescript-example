@@ -8,7 +8,7 @@ export class App extends Component<Props> {
   render () {
     return (
       <div>
-        hi {this.props.name} from tsx!
+        Γεια Σου Κοσμε!! {this.props.name} from tsx!
       </div>
     )
   }

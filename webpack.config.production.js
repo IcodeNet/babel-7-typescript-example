@@ -14,14 +14,6 @@ module.exports = function () {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.[hash].js' }),
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-          warnings: true
-        }
-      }
-    }),
     webpackFailPlugin
   )
 
