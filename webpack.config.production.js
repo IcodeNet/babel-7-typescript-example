@@ -2,12 +2,15 @@ const webpack = require('webpack')
 const webpackFailPlugin = require('webpack-fail-plugin')
 const TerserPlugin = require('terser-webpack-plugin');
 
-
 const webpackConfig = require('./webpack.config.base.js')
 
 module.exports = function () {
   const myProdConfig = webpackConfig
   myProdConfig.output.filename = '[name].[hash].js'
+  
+  // https://webpack.js.org/configuration/mode/
+  // Please remember that setting NODE_ENV doesn't automatically set mode.
+  myProdConfig.mode = 'production';
 
   myProdConfig.optimization = {
     usedExports: true,
@@ -25,12 +28,6 @@ module.exports = function () {
   };
 
   myProdConfig.plugins = myProdConfig.plugins.concat(
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-
     webpackFailPlugin
   )
 
